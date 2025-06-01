@@ -4,8 +4,7 @@ Welcome to my personal developer portfolio website!
 This site highlights my journey in **Data Structures & Algorithms**, **Competitive Programming**, and **Full Stack Development**. Built with a modern, clean dark theme and responsive design.
 
 ## 🚀 Live Preview
-[Click here to visit the portfolio](https://your-portfolio-link.com)  
-_(Update this with your GitHub Pages or custom domain)_
+[Click here to visit the portfolio](https://portfolio-beige-beta-99.vercel.app/)  
 
 ---
 
