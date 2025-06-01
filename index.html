@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Hassan's Portfolio</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+  <script>
+    (function() {
+      emailjs.init('VXJtCtdD8ygUEDRcJ'); // Replace with your public key
+    })();
+  </script>
+</head>
+<body class="dark-mode">
+  <header>
+    <nav class="navbar">
+      <div class="logo">Hassan<span>Dev</span></div>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#profiles">Profiles</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="hero" class="hero-section">
+    <div class="hero-content">
+      <h1>Hi, I'm <span>Hassan</span></h1>
+      <p>DSA and CP Enthusiast | Full Stack Developer<br /> B.Tech Student at IIIT Kota</p>
+      <a href="#projects" class="btn">View My Work</a>
+    </div>
+  </section>
+
+  <!-- NEW: Content Container Wrapper -->
+  <div class="content-container">
+    <section id="about" class="section">
+      <h2>About Me</h2>
+      <p>
+        I'm a dedicated problem solver with a strong focus on <strong>Data Structures and Algorithms</strong> and <strong>Competitive Programming</strong>, actively participating on platforms like LeetCode, Codeforces, and CodeChef.
+      </p>
+      <p>
+        While DSA is my main strength, I'm also building my skills in <strong>Full Stack Development</strong>, with hands-on experience in <strong>JavaScript, React, Node.js,</strong> and <strong>MongoDB</strong>.
+      </p>
+      <p>
+        I'm currently pursuing a B.Tech in ECE at IIIT Kota, aiming to combine algorithmic thinking with practical development to solve real-world problems.
+      </p>
+    </section>
+
+    <section id="projects" class="section">
+      <h2>Projects</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <h3>Portfolio Website</h3>
+          <p>
+            A responsive personal portfolio to showcase my work and skills, designed with a clean dark theme.
+          </p>
+        </div>
+        <div class="project-card">
+          <h3>Task Manager App</h3>
+          <p>
+            A full-stack app to manage daily tasks, featuring user login and MongoDB integration for persistence.
+          </p>
+        </div>
+        <div class="project-card">
+          <h3>Blog Platform</h3>
+          <p>
+            A blog site built using MERN stack allowing users to post, edit, and delete content securely.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="profiles" class="section">
+      <h2>Competitive Programming Profiles</h2>
+      <div class="projects-grid">
+        <div class="project-card">
+          <img src="leetcode.png" alt="LeetCode Icon" class="profile-icon" />
+          <h3>LeetCode</h3>
+          <p>
+            Problems Solved: <span id="lc-rating">Loading...</span><br />
+            Easy: <span id="lc-easy">-</span> |
+            Medium: <span id="lc-medium">-</span> |
+            Hard: <span id="lc-hard">-</span>
+          </p>
+          <a href="https://leetcode.com/Hassan_code" target="_blank">Visit Profile</a>
+        </div>
+        <div class="project-card">
+          <img src="codeforces.png" alt="Codeforces Icon" class="profile-icon" />
+          <h3>Codeforces</h3>
+          <p>
+            Rating: <span id="cf-rating">Loading...</span><br />
+            Max Rating: <span id="cf-maxrating">-</span>
+          </p>
+          <a href="https://codeforces.com/profile/2024kuec2011" target="_blank">Visit Profile</a>
+        </div>
+        <div class="project-card">
+          <img src="codechef.jpg" alt="CodeChef Icon" class="profile-icon" />
+          <h3>CodeChef</h3>
+          <!-- <p>Rating: 1800 (3 Star)<br />Contests: 40+<br />Problems Solved: 400+</p> -->
+          <a href="https://www.codechef.com/users/breezy_wolf_22" target="_blank">Visit Profile</a>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 2rem;">
+        <a href="https://linkedin.com/in/hassan-848131260" target="_blank" style="color: #00ffff; font-size: 1.5rem;">
+          <i class="fab fa-linkedin"></i> Connect on LinkedIn
+        </a>
+      </div>
+    </section>
+
+    <section id="education" class="section">
+      <h2>Education</h2>
+      <div class="edu-card">
+        <h3>Indian Institute of Information Technology, Kota</h3>
+        <p><strong>Degree:</strong> B.Tech in Electronics and Communication Engineering</p>
+        <p><strong>Duration:</strong> 2024 - Present</p>
+        <p><strong>CGPA:</strong> 8.2</p>
+      </div>
+    </section>
+
+    <section id="certifications" class="section">
+      <h2>Certifications</h2>
+      <div class="cert-grid">
+        <div class="cert-card">
+          <h3>HP LIFE - Data Science and Analytics</h3>
+          <p>Completed a certified course in data analytics and visualization techniques.</p>
+        </div>
+        <!-- Add more certifications easily below -->
+        <!--
+          <div class="cert-card">
+            <h3>[New Certificate Name]</h3>
+            <p>[Short description]</p>
+          </div>
+        -->
+      </div>
+    </section>
+
+    <section id="contact" class="section">
+      <h2>Contact</h2>
+      <form id="contact-form">
+        <input type="text" name="name" placeholder="Your Name" required />
+        <input type="email" name="email" placeholder="Your Email" required />
+        <textarea name="message" placeholder="Your Message" required></textarea>
+        <button type="submit" class="btn">Send Message</button>
+        <p style="font-family: 'Inter', 'sans-serif'">or mail at hk747p@gmail.com</p>
+      </form>
+    </section>
+
+  </div>
+
+  <footer style="margin-bottom: 0px;">
+    <p>&copy; 2025 Hassan. Crafted with passion.</p>
+  </footer>
+
+  <!-- Popup Message Container -->
+  <div id="popup-message" class="popup-message hidden">
+    <p id="popup-text"></p>
+    <button id="popup-close">Close</button>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>

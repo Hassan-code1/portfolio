@@ -1,0 +1,518 @@
+/* Reset & Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body.dark-mode {
+  background-color: #121212;
+  color: #f0f0f0;
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  color: #00ffff;
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 2rem;
+  background: #1e1e1e;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: 800;
+  color: #00ffff;
+}
+
+.logo span {
+  color: #ffffff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-links li a {
+  font-weight: 600;
+}
+
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger div {
+  width: 25px;
+  height: 3px;
+  background-color: #fff;
+}
+
+/* Hero */
+.hero-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 90vh;
+  text-align: center;
+  padding: 0 1rem;
+  margin-top: 160px; /* Adjust for fixed navbar */
+  /* margin-bottom: 25%; */
+}
+
+.hero-section h1 {
+  font-size: 2.5rem;
+  margin-bottom: 0.5rem;
+}
+
+.hero-section span {
+  color: #00ffff;
+}
+
+.hero-section p {
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.btn {
+  background-color: #00ffff;
+  color: #121212;
+  padding: 0.8rem 1.5rem;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.btn:hover {
+  transform: scale(1.05);
+}
+
+/* Sections */
+.section {
+  padding: 3rem 1rem;
+  max-width: 1000px;
+  margin: auto;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.project-card {
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Contact */
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 600px;
+  margin: auto;
+}
+
+input, textarea {
+  padding: 0.8rem;
+  border: none;
+  border-radius: 8px;
+  background-color: #2c2c2c;
+  color: #f0f0f0;
+  font-size: 1rem;
+}
+
+textarea {
+  height: 150px;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background: #1e1e1e;
+  color: #888;
+  margin-bottom: 0%;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background: #1e1e1e;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: flex;
+  }
+}
+/* Base styles omitted for brevity, assuming existing reset and layout */
+
+/* Profile Section Styles */
+#profiles {
+  text-align: center;
+}
+
+#profiles h2 {
+  font-size: 2rem;
+  margin-bottom: 2rem;
+}
+
+#profiles .projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+#profiles .project-card {
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+  color: #fff;
+  transition: transform 0.3s ease;
+}
+
+#profiles .project-card:hover {
+  transform: translateY(-5px);
+}
+
+#profiles a {
+  color: #00ffff;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+
+#profiles a:hover {
+  text-decoration: underline;
+}
+
+#profiles i.fab.fa-linkedin {
+  margin-right: 0.5rem;
+}
+
+/* Ensure LinkedIn link in center block is styled */
+#profiles > div:last-child {
+  margin-top: 2rem;
+  font-size: 1.2rem;
+}
+
+/* Responsive nav toggle (if already included) */
+@media (max-width: 768px) {
+  .nav-links.active {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.profile-icon {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+  margin-bottom: 10px;
+}
+
+@keyframes fadeSlideUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.project-card {
+  animation: fadeSlideUp 0.6s ease forwards;
+  opacity: 0; /* start hidden, animation will show */
+}
+
+.project-card:nth-child(1) {
+  animation-delay: 0.1s;
+}
+
+.project-card:nth-child(2) {
+  animation-delay: 0.3s;
+}
+
+.project-card:nth-child(3) {
+  animation-delay: 0.5s;
+}
+
+.profile-icon {
+  animation: fadeSlideUp 0.6s ease forwards;
+  opacity: 0;
+  animation-delay: 0.1s;
+}
+
+/* Button hover effect */
+.btn {
+  background: linear-gradient(90deg, #00ffff 0%, #008b8b 100%);
+  color: #000;
+  transition: background 0.4s ease, color 0.4s ease, box-shadow 0.3s ease;
+  box-shadow: 0 0 8px rgba(0, 255, 255, 0.4);
+}
+
+.btn:hover {
+  background: linear-gradient(90deg, #008b8b 0%, #00ffff 100%);
+  color: #fff;
+  box-shadow: 0 0 15px rgba(0, 255, 255, 0.8);
+  transform: scale(1.05);
+}
+
+/* Profile card hover */
+.project-card {
+  background-color: #1e1e1e;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+  color: #fff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+  cursor: pointer;
+}
+
+.project-card:hover {
+  background-color: #008b8b;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.9);
+  transform: translateY(-10px) scale(1.05);
+  color: #e0f7f7;
+}
+
+/* Links inside profiles */
+#profiles a {
+  color: #00ffff;
+  font-weight: 600;
+  text-decoration: none;
+  display: inline-block;
+  margin-top: 0.5rem;
+  transition: color 0.3s ease, text-shadow 0.3s ease;
+}
+
+#profiles a:hover {
+  color: #66ffff;
+  text-shadow: 0 0 6px #66ffff;
+  text-decoration: underline;
+}
+
+/* LinkedIn icon hover */
+#profiles a i.fab.fa-linkedin {
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#profiles a:hover i.fab.fa-linkedin {
+  color: #0a66c2;
+  transform: scale(1.2);
+}
+
+/* Smooth cursor pointer on buttons and links */
+.btn, .project-card, #profiles a {
+  cursor: pointer;
+}
+
+.popup-message {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #008b8b;
+  color: #fff;
+  padding: 1rem 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 0 15px #00ffffaa;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  animation: fadeSlideDown 0.4s ease forwards;
+}
+
+.popup-message.hidden {
+  display: none;
+}
+
+#popup-close {
+  background: none;
+  border: 1px solid #00ffff;
+  color: #00ffff;
+  padding: 0.3rem 0.6rem;
+  border-radius: 5px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+#popup-close:hover {
+  background-color: #00ffff;
+  color: #004c4c;
+}
+
+@keyframes fadeSlideDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+/* Navbar link hover effect */
+.navbar .nav-links a {
+  position: relative;
+  color: #ccc;
+  text-decoration: none;
+  padding: 0.5rem;
+  transition: color 0.3s ease;
+}
+
+.navbar .nav-links a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  height: 2px;
+  width: 0%;
+  background-color: #00ffff;
+  transition: width 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+  color: #00ffff;
+}
+
+.navbar .nav-links a:hover::after {
+  width: 100%;
+}
+
+.section {
+  margin: 4rem 2rem;
+}
+
+.edu-card, .cert-card {
+  background-color: #1e1e1e;
+  border: 1px solid #333;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.edu-card:hover, .cert-card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 0 15px rgba(0,255,255,0.2);
+}
+
+.cert-grid {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+.content-container {
+  max-width: 1000px;      
+  margin: 0 auto;        
+  padding: 0 1.5rem;      
+  box-sizing: border-box;
+}
+
+body.dark-mode {
+  background: radial-gradient(ellipse at bottom, #0f0f0f 0%, #000000 100%);
+  color: #f0f0f0;
+  font-family: 'Inter', sans-serif;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body.dark-mode::before {
+  content: '';
+  position: absolute;
+  width: 700px;
+  height: 700px;
+  background: rgba(0, 255, 255, 0.15);
+  top: -200px;
+  left: -200px;
+  border-radius: 50%;
+  filter: blur(150px);
+  z-index: -1;
+}
+
+body.dark-mode::after {
+  content: '';
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  background: rgba(255, 0, 255, 0.12);
+  bottom: -150px;
+  right: -150px;
+  border-radius: 50%;
+  filter: blur(140px);
+  z-index: -1;
+}
+
+ html, body {
+  height: 100%;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+html {
+  scroll-behavior: smooth;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  height: 60px; /* Set height explicitly */
+  background-color: #111; /* example color */
+  z-index: 1000;
+}
+
+.hero-section {
+  padding-top: 80px; /* At least navbar height + spacing */
+}
