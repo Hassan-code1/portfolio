@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+    <link rel="stylesheet" href="pro1.css">
+</head>
+<body class="body">
+    <header>
+        <div class="logo">Hassan<span class="Dev">Dev</span></div>
+        <div class="links">
+            <!-- <a class="indLinks" href="main.html">Home</a> -->
+            <a class="indLinks" href="https://portfolio-beige-beta-99.vercel.app/" target="_blank" rel="noopener"">Portfolio</a>
+            <a class="indLinks" href="https://www.linkedin.com/in/hassan-khan-848131260" target="_blank" rel="noopener">Linkedin</a>
+            <a class="indLinks" href="https://github.com/Hassan-code1" target="_blank" rel="noopener">Github</a>
+        </div>
+    </header>
+    <h1 class="text">Welcome to the Color Changer</h1>
+    <p class="text">Click the button below to change the background color:</p>
+    <p class="text" id="colorDisplay">Current Color: <span id="currentColor">white</span></p>
+    <div class="container">
+       <button class="block" onclick="changeColor('white')">white</button>
+       <button class="block" onclick="changeColor('yellow')">yellow</button>
+       <button class="block" onclick="changeColor('green')">green</button>
+       <button class="block" onclick="changeColor('blue')">blue</button>
+       <button class="block" onclick="changeColor('pink')">pink</button>
+       <button class="block" onclick="changeColor('purple')">purple</button>
+       <button class="block" onclick="changeColor('orange')">orange</button>
+       <button class="block" onclick="changeColor('teal')">teal</button>
+       <button class="block" onclick="changeColor('cyan')">cyan</button>
+    </div>
+    <p class="text">Click the color button as you want to change the background color:</p>
+    <script src="pro1.js"></script>
+</body>
+</html>

@@ -21,7 +21,6 @@ ul {
   list-style: none;
 }
 
-/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -31,6 +30,12 @@ ul {
   position: sticky;
   top: 0;
   z-index: 1000;
+}
+
+.left-nav {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
 }
 
 .logo {
@@ -43,6 +48,21 @@ ul {
   color: #ffffff;
 }
 
+.profileContainer {
+  display: flex;
+  align-items: center;
+}
+
+.ImageNavbarLink {
+  margin-left: 0.5rem;
+}
+
+.navbarImage {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+}
+
 .nav-links {
   display: flex;
   gap: 1.5rem;
@@ -50,6 +70,8 @@ ul {
 
 .nav-links li a {
   font-weight: 600;
+  color: white;
+  text-decoration: none;
 }
 
 .hamburger {
@@ -515,4 +537,10 @@ html {
 
 .hero-section {
   padding-top: 80px; /* At least navbar height + spacing */
+}
+footer {
+  margin-bottom: 0px;
+}
+.mail {
+  font-family: 'Inter', 'sans-serif';
 }

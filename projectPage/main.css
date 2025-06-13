@@ -1,0 +1,120 @@
+/* Reset and basic styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', sans-serif;
+  background: #131313;
+  color: #f0f0f0;
+  /* position: relative; */
+  padding: 30px;
+  padding-top: 10px;
+  min-height: 100vh;
+  margin-bottom: 100px;
+}
+
+header {
+  text-align: center;
+  margin-bottom: 40px;
+  /* margin-top: 20px; */
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #ffffff;
+}
+
+.tagline {
+  color: #bbbbbb;
+  font-size: 1.1rem;
+  margin-top: 10px;
+}
+
+/* Project Grid Layout */
+.project-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 24px;
+}
+
+/* Project Card Styling */
+.project-card {
+  background-color: #1e1e1e;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 30px rgba(0,0,0,0.4);
+}
+
+.project-card img {
+  width: 100%;
+  height: 170px;
+  object-fit: cover;
+}
+
+.project-card h2 {
+  font-size: 1.3rem;
+  margin: 15px;
+  color: #ffffff;
+}
+
+.project-card p {
+  font-size: 0.95rem;
+  margin: 0 15px 15px;
+  color: #cccccc;
+}
+.project-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+/* Navbar Styling */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #1e1e1e;
+  padding: 15px 30px;
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.4);
+}
+
+
+.nav-brand {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li a {
+  color: #cccccc;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s;
+}
+
+.nav-links li a:hover {
+  color: #ffffff;
+}
+html, body {
+  height: 100%;
+  scroll-behavior: smooth;
+}
+

@@ -1,0 +1,86 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background: #212121;
+  margin: 0;
+}
+
+.clock {
+  width: 300px;
+  height: 300px;
+  border: 10px solid #fff;
+  border-radius: 50%;
+  position: relative;
+  background: #000;
+}
+
+.hand_hour {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(0deg);
+  /* background: rgb(255, 255, 255); */
+  border-radius: 5px;
+  width: 8px;
+  height: 70px;
+  background: #f44336;
+}
+
+.hand_minute {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(0deg);
+  /* background: rgb(255, 255, 255); */
+  border-radius: 5px;
+  width: 6px;
+  height: 100px;
+  background: #4caf50;
+}
+
+.hand_second {
+  position: absolute;
+  bottom: 50%;
+  left: 50%;
+  transform-origin: bottom;
+  transform: translateX(-50%) rotate(0deg);
+  /* background: rgb(255, 255, 255); */
+  border-radius: 5px;
+  width: 3px;
+  height: 120px;
+  background: #2196f3;
+}
+.center-point {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  background: white;
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.number {
+  position: absolute;
+  color: white;
+  font-size: 20px;
+  font-weight: bold;
+  transform: translate(-50%, -50%);
+}
+
+.number1  { top: 20%; left: 73%; }
+.number2  { top: 33%; left: 87%; }
+.number3  { top: 50%; left: 92%; }
+.number4  { top: 68%; left: 87%; }
+.number5  { top: 82%; left: 73%; }
+.number6  { top: 90%; left: 50%; }
+.number7  { top: 82%; left: 27%; }
+.number8  { top: 68%; left: 13%; }
+.number9  { top: 50%; left: 8%; }
+.number10 { top: 33%; left: 13%; }
+.number11 { top: 20%; left: 27%; }
+.number12 { top: 12%; left: 50%; }
